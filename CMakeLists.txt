@@ -15,10 +15,10 @@ catkin_package()
 
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(ros_erle_buzzer_client src/ros_erle_buzzer_client.cpp)
-target_link_libraries(ros_erle_buzzer_client ${catkin_LIBRARIES})
-add_dependencies(ros_erle_buzzer_client ros_erle_buzzer_generate_messages_cpp)
+add_executable(ros_erle_buzzer_writer examples/ros_erle_buzzer_writer.cpp)
+target_link_libraries(ros_erle_buzzer_writer ${catkin_LIBRARIES})
+add_dependencies(ros_erle_buzzer_writer ros_erle_buzzer_generate_messages_cpp)
 
-add_executable(ros_erle_buzzer_server src/ros_erle_buzzer_server.cpp src/ToneAlarmDriver.cpp)
-target_link_libraries(ros_erle_buzzer_server ${catkin_LIBRARIES})
-add_dependencies(ros_erle_buzzer_server ros_erle_buzzer_generate_messages_cpp)
+add_executable(ros_erle_buzzer_main src/ros_erle_buzzer_main.cpp src/ToneAlarmDriver.cpp)
+target_link_libraries(ros_erle_buzzer_main ${catkin_LIBRARIES})
+add_dependencies(ros_erle_buzzer_main ros_erle_buzzer_generate_messages_cpp)
