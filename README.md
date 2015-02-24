@@ -23,7 +23,7 @@ rosrun ros_erle_buzzer ros_erle_buzzer_main
 
 ```
 cd ros_catkin_ws/src
-git clone https://github.com/ros_erle_buzzer
+git clone https://github.com/erlerobot/ros-hydro-erle-buzzer
 cd ..
 catkin_make_isolate
 source devel_isolated/setup.bash
