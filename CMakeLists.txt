@@ -22,3 +22,16 @@ add_dependencies(ros_erle_buzzer_writer ros_erle_buzzer_generate_messages_cpp)
 add_executable(ros_erle_buzzer_main src/ros_erle_buzzer_main.cpp src/ToneAlarmDriver.cpp)
 target_link_libraries(ros_erle_buzzer_main ${catkin_LIBRARIES})
 add_dependencies(ros_erle_buzzer_main ros_erle_buzzer_generate_messages_cpp)
+
+file(GLOB SCRIPTS ${PROJECT_SOURCE_DIR}/examples/*)
+  catkin_install_python(PROGRAMS
+  ${SCRIPTS}
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
+
+install(
+	TARGETS ros_erle_buzzer_main ros_erle_buzzer_writer
+	ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+	LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+	RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
