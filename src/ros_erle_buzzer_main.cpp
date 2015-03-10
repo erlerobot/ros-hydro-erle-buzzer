@@ -58,7 +58,7 @@ void buzzerCallback(const ros_erle_buzzer::buzzer::ConstPtr& msg)
 {
   ROS_INFO("I heard: Tune:[%d]", msg->tune);
 
-  if(state==-1){
+  if(state==-1 && msg->tune < 11){
   	buz.set_tune(msg->tune);
   	state = 0;
   }
