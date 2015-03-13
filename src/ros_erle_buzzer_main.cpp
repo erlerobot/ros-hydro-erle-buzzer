@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <sys/time.h>
-#include <pthread.h>
 
 #include "ToneAlarmDriver.h"
 
