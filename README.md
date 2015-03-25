@@ -23,7 +23,7 @@ rosrun ros_erle_buzzer ros_erle_buzzer_main
 
 ```
 cd ros_catkin_ws/src
-git clone https://github.com/erlerobot/ros-hydro-erle-buzzer
+git clone https://github.com/erlerobot/ros_erle_buzzer
 cd ..
 catkin_make_isolate
 source devel_isolated/setup.bash
@@ -34,7 +34,7 @@ or
 cd ~/ros_catkin_ws/src
 
 wstool init src 
-set -t src ros_erle_statusled --git https://github.com/erlerobot/ros_erle_statusled
+set -t src ros_erle_statusled --git https://github.com/erlerobot/ros_erle_buzzer
 wstool update -t src
 ```
 Then use regular `catkin_make_isolated` for build and install.
