@@ -25,7 +25,7 @@ rosrun ros_erle_buzzer ros_erle_buzzer_main
 cd ros_catkin_ws/src
 git clone https://github.com/erlerobot/ros_erle_buzzer
 cd ..
-catkin_make_isolate --install -DCMAKE_INSTALL_BUILD=Release --pkg ros_erle_buzzer
+catkin_make_isolated --install -DCMAKE_INSTALL_BUILD=Release --pkg ros_erle_buzzer
 source devel_isolated/setup.bash
 ```
 or 
