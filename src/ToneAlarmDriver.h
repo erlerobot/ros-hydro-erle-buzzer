@@ -105,7 +105,7 @@
 #define     TONE_ARMING_FAILURE_TUNE            9    
 #define     TONE_PARACHUTE_RELEASE_TUNE         10
 
-#define TONE_NUMBER_OF_TUNES 11
+#define TONE_NUMBER_OF_TUNES 12
 
 #include <stdint.h>
 #include <sys/time.h>
